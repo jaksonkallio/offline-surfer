@@ -4,13 +4,13 @@
 	"version": "1.0",
 	"description": "Offline tools.",
 	"icons": {
-		"48": "cloud.png"
+		"48": "icons/cloud-48.png"
 	},
-
-	"content_scripts": [
-		{
-			"matches": ["*://*"],
-			"js": ["toolbox.js"]
-		}
-	]
+	"permissions": [
+		"webRequest",
+		"<all_urls>"
+	],
+	"background": {
+		"scripts": ["background.js"]
+	}
 }
