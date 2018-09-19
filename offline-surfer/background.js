@@ -12,3 +12,4 @@ function statusCallback(status){
 
 startup();
 browser.webRequest.onBeforeRequest.addListener(statusCallback, { urls: ["<all_urls>"] });
+console.log("still alive");

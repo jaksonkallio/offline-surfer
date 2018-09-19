@@ -6,11 +6,12 @@
 	"icons": {
 		"48": "icons/cloud-48.png"
 	},
-	"permissions": [
-		"webRequest",
-		"<all_urls>"
-	],
 	"background": {
 		"scripts": ["background.js"]
-	}
+	},
+	"permissions": [
+		"tabs",
+		"webRequest",
+		"<all_urls>"
+	]
 }
