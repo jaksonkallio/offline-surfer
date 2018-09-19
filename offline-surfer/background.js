@@ -15,7 +15,8 @@ function retry(tab_id){
 }
 
 function errorWarrantsRetry(error){
-	var valid_errors = ["NS_ERROR_UNKNOWN_HOST"];
+	// https://developer.mozilla.org/en-US/docs/Mozilla/Errors
+	var valid_errors = ["NS_ERROR_UNKNOWN_HOST", "NS_ERROR_CONNECTION_REFUSED", "NS_ERROR_NET_TIMEOUT", "NS_ERROR_OFFLINE", "NS_ERROR_NET_RESET"];
 
 	if(valid_errors.indexOf(error) >= 0){
 		return true;
@@ -34,4 +35,4 @@ function errorCallback(status){
 }
 
 startup();
-browser.webRequest.onErrorOccurred.addListener(errorCallback, { urls: ["<all_urls>"] });
+browser.webRequest.onErrorOccurred.addListener(errorCallback, {types: ["main_frame"], urls: ["<all_urls>"] });
