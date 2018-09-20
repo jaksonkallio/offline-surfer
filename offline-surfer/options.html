@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 		<link href="style.css" rel="stylesheet" type="text/css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="jquery.min.js"></script>
 		<script src="options.js"></script>
 	</head>
 	<body>
@@ -12,7 +12,11 @@
 			<div class="panel">
 				<div class="title">Offline Surfer Options</div>
 				<div class="content">
-					Content goes here.
+					<div class="field" data-field="auto-retry-interval">
+						<div class="label">Auto-retry Interval</div>
+						<input type="number" min="500" max="180000"/>
+					</div>
+					<a class="button" data-submit>Save</a>
 				</div>
 			</div>
 		</div>
