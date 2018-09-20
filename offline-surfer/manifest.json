@@ -6,12 +6,22 @@
 	"icons": {
 		"48": "icons/cloud-48.png"
 	},
+	"options_ui": {
+		"page": "options.html"
+	},
 	"background": {
 		"scripts": ["background.js"]
+	},
+	"applications": {
+		"gecko": {
+			"id": "{0d761158-cbec-4cbe-b67c-53a047a5ac14}",
+			"strict_min_version": "42.0"
+		}
 	},
 	"permissions": [
 		"tabs",
 		"webRequest",
+		"storage",
 		"<all_urls>"
 	]
 }
